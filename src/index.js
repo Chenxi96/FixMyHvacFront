@@ -9,11 +9,11 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
 <Auth0Provider
-    domain="dev-wt8ihp43q2h5vwd3.us.auth0.com"
-    clientId="JCbszHXGyAmcSHlNzEUEoeItx6urKIvQ"
+    domain={process.env.DOMAIN}
+    clientId={process.env.CLIENT_ID}
     authorizationParams={{
-      redirect_uri: 'http://localhost:3000/loggedIn',
-      audience: "http://localhost:4000",
+      redirect_uri: 'https://fix-my-hvac-front.vercel.app/loggedIn',
+      audience: "https://fix-my-hvac.onrender.com",
     }}
   >
     <App />
