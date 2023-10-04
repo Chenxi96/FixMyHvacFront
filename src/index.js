@@ -5,15 +5,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
 const root = createRoot(document.getElementById('root'));
 
 root.render(
 <Auth0Provider
-    domain={process.env.REACT_APP_DOMAIN}
-    clientId={process.env.REACT_APP_CLIENT_ID}
+    domain="dev-wt8ihp43q2h5vwd3.us.auth0.com"
+    clientId="JCbszHXGyAmcSHlNzEUEoeItx6urKIvQ"
     authorizationParams={{
-      redirect_uri: 'https://fix-my-hvac-front.vercel.app/loggedIn',
+      redirect_uri: 'http://localhost:3000/loggedIn',
       audience: "https://fix-my-hvac.onrender.com",
     }}
   >

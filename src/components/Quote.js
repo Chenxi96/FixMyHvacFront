@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
-import React, { useState } from "react";
+import React from "react";
 
 export default function Quote() {
     const {getAccessTokenSilently} = useAuth0();
 
     
-    const submitChange = async (e) => {
+    const submitChange = async () => {
+        console.log('test')
         const accessToken = await getAccessTokenSilently();
         await axios.postForm('https://fix-my-hvac.onrender.com/address', document.querySelector('#form'), {
             headers: {
