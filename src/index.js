@@ -12,7 +12,7 @@ root.render(
     domain="dev-wt8ihp43q2h5vwd3.us.auth0.com"
     clientId="JCbszHXGyAmcSHlNzEUEoeItx6urKIvQ"
     authorizationParams={{
-      redirect_uri: 'http://localhost:3000/loggedIn',
+      redirect_uri: 'https://curious-bubblegum-0efc41.netlify.app/loggedIn',
       audience: "https://fix-my-hvac.onrender.com",
     }}
   >
