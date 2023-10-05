@@ -6,19 +6,22 @@ export default function Quote() {
     const {getAccessTokenSilently} = useAuth0();
 
     
-    const submitChange = async () => {
-        console.log('test')
+    const submitChange = async (event) => {
+        event.preventDefault();
         const accessToken = await getAccessTokenSilently();
-        await axios.postForm('https://fix-my-hvac.onrender.com/address', document.querySelector('#form'), {
+        const form = document.getElementById('form')
+        const formData = new FormData(form)
+        await axios.post('https://fix-my-hvac.onrender.com/address', formData, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
         })
+            .then(res => console.log(res))
     }
 
     return (
         <>
-            <form id="form" onSubmit={submitChange}>
+            <form id="form" onSubmit={submitChange} >
                 <label for="address">Address</label>
                 <input type="text" name="address" id="address"  /><br/>
                 <label for="name">Job Title</label>
