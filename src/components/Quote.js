@@ -6,8 +6,7 @@ export default function Quote() {
     const {getAccessTokenSilently} = useAuth0();
 
     
-    const submitChange = async (event) => {
-        event.preventDefault();
+    const submitChange = async () => {
         const accessToken = await getAccessTokenSilently();
         const form = document.getElementById('form')
         const formData = new FormData(form)
@@ -17,6 +16,7 @@ export default function Quote() {
             }
         })
             .then(res => console.log(res))
+            console.log('from local')
     }
 
     return (

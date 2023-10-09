@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import CustomerPage from './pages/Customer-page';
+import ImagesPage from './pages/Images-page';
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>} />
           <Route path='/loggedIn' element={<CustomerPage/>} />
+          <Route path='/allQuotes' element={<ImagesPage />} />
         </Routes>
       </BrowserRouter>
   );
