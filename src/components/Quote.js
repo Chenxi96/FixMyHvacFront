@@ -35,7 +35,7 @@ export default function Quote() {
                 <label for="description">Description</label>
                 <textarea type="text" name="description" id="description" ></textarea><br/>
                 <label for="images">Images</label>
-                <input type="file" onChange={changeHandle} name="images" id="images" multiple /><br/>
+                <input type="file" name="images" id="images" multiple /><br/>
                 <input type="submit" value="Save" />
             </form>
             {form}
