@@ -38,7 +38,6 @@ export default function Quote() {
                 <input type="file" name="images" id="images" multiple /><br/>
                 <input type="submit" value="Save" />
             </form>
-            {form}
         </>
     )
 }
